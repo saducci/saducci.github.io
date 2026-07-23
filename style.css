@@ -33,7 +33,7 @@ h1 {
 
 .card {
     background: #1e293b;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     padding: 25px;
     margin-bottom: 25px;
     border: 1px solid #334155;
@@ -57,7 +57,7 @@ h2 {
     color: white;
     text-decoration: none;
     padding: 12px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     transition: 0.2s;
 }
 
