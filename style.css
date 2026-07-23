@@ -109,6 +109,19 @@ footer {
     font-size: 12px;
     color: #c0b49b;
 }
+.profile {
+    text-align: center;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #8a806d;
+    margin: 10px auto;
+    display: block;
+}
 
 /* Phone layout */
 @media (max-width: 600px) {
