@@ -1,6 +1,6 @@
 body {
-    background: #2b2925;
-    color: #d8d2c4;
+    background: #3a3731;
+    color: #e2dccf;
     font-family: "Times New Roman", serif;
     margin: 0;
 }
@@ -11,32 +11,32 @@ body {
 }
 
 header {
-    background: #3a3731;
-    border: 2px solid #6b6458;
+    background: #4a463d;
+    border: 2px solid #807766;
     padding: 20px;
     text-align: center;
 }
 
 h1 {
     font-size: 36px;
-    color: #f0e4c4;
+    color: #f5e6bd;
 }
 
 .nickname {
-    color: #c8bfae;
+    color: #d4c9b5;
 }
 
 .card {
-    background: #35322c;
-    border: 1px solid #71695b;
+    background: #454138;
+    border: 1px solid #8a806d;
     padding: 15px;
     margin-top: 15px;
 }
 
 h2 {
-    background: #403c34;
-    color: #e8d6a8;
-    border-bottom: 1px solid #807766;
+    background: #504b40;
+    color: #f0dca5;
+    border-bottom: 1px solid #948873;
     padding: 5px;
 }
 
@@ -46,22 +46,22 @@ p, li {
 
 .links a {
     display: block;
-    background: #454035;
-    color: #e4c477;
+    background: #595345;
+    color: #f1d58a;
     text-decoration: none;
     padding: 8px;
     margin: 8px 0;
-    border: 1px solid #766c57;
+    border: 1px solid #8f8268;
 }
 
 .links a:hover {
-    background: #574f3f;
-    color: #fff1c7;
+    background: #6a604f;
+    color: #fff4d0;
 }
 
 code {
-    background: #24221e;
-    border: 1px solid #665d4c;
+    background: #302d27;
+    border: 1px solid #7b705d;
     padding: 5px;
     display: inline-block;
 }
@@ -70,5 +70,5 @@ footer {
     text-align: center;
     margin-top: 30px;
     font-size: 12px;
-    color: #aaa18d;
+    color: #c0b49b;
 }
