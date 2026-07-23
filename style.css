@@ -1,7 +1,8 @@
 body {
-    background: #eeeeee;
+    background: #2b2925;
+    color: #d8d2c4;
     font-family: "Times New Roman", serif;
-    color: #222;
+    margin: 0;
 }
 
 .container {
@@ -10,37 +11,64 @@ body {
 }
 
 header {
-    background: white;
-    border: 2px solid #333;
+    background: #3a3731;
+    border: 2px solid #6b6458;
     padding: 20px;
     text-align: center;
 }
 
+h1 {
+    font-size: 36px;
+    color: #f0e4c4;
+}
+
+.nickname {
+    color: #c8bfae;
+}
+
 .card {
-    background: white;
-    border: 1px solid #777;
+    background: #35322c;
+    border: 1px solid #71695b;
     padding: 15px;
     margin-top: 15px;
 }
 
-h1 {
-    font-size: 36px;
+h2 {
+    background: #403c34;
+    color: #e8d6a8;
+    border-bottom: 1px solid #807766;
+    padding: 5px;
 }
 
-h2 {
-    background: #dddddd;
-    border-bottom: 1px solid #999;
-    padding: 5px;
+p, li {
+    line-height: 1.6;
 }
 
 .links a {
     display: block;
-    color: blue;
-    margin: 8px;
+    background: #454035;
+    color: #e4c477;
+    text-decoration: none;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #766c57;
+}
+
+.links a:hover {
+    background: #574f3f;
+    color: #fff1c7;
+}
+
+code {
+    background: #24221e;
+    border: 1px solid #665d4c;
+    padding: 5px;
+    display: inline-block;
 }
 
 footer {
     text-align: center;
     margin-top: 30px;
     font-size: 12px;
+    color: #aaa18d;
 }
