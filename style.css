@@ -1,66 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: #534f4633;
     color: #f8f7f4;
     font-family: "Times New Roman", serif;
-    font-size: large;
+    font-size: 16px;
     margin: 0;
 }
 
+
+/* Main page container */
 .container {
-    width: 90%;
+    width: calc(100% - 40px);
     max-width: 800px;
     margin: 20px auto;
 }
 
+
+/* Top header */
 header {
     background: #4a463d;
     border: 2px solid #807766;
     padding: 20px;
     text-align: center;
+    border-radius: 4px;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: clamp(28px, 6vw, 36px);
     color: #f5e6bd;
+    margin: 0;
 }
 
 .nickname {
     color: #d4c9b5;
 }
 
+
+/* Content boxes */
 .card {
     background: #454138;
     border: 1px solid #8a806d;
     padding: 15px;
     margin-top: 15px;
+    width: 100%;
+    overflow-wrap: break-word;
 }
+
 
 h2 {
     background: #504b40;
     color: #f0dca5;
     border-bottom: 1px solid #948873;
     padding: 5px;
+    margin-top: 0;
+    font-size: clamp(18px, 4vw, 24px);
 }
+
 
 p, li {
     line-height: 1.6;
 }
 
+
+/* Links box */
 .links a {
     display: block;
     background: #595345;
     color: #f1d58a;
     text-decoration: none;
-    padding: 8px;
+    padding: 10px;
     margin: 8px 0;
     border: 1px solid #8f8268;
+    border-radius: 3px;
 }
+
 
 .links a:hover {
     background: #6a604f;
     color: #fff4d0;
 }
 
+
+/* Code blocks */
 code {
     background: #302d27;
     border: 1px solid #7b705d;
@@ -70,11 +94,15 @@ code {
     overflow-wrap: break-word;
 }
 
+
+/* Images */
 img {
     max-width: 100%;
     height: auto;
 }
 
+
+/* Footer */
 footer {
     text-align: center;
     margin-top: 30px;
@@ -82,21 +110,20 @@ footer {
     color: #c0b49b;
 }
 
-
 /* Phone layout */
 @media (max-width: 600px) {
 
     body {
-        font-size: medium;
+        font-size: 16px;
     }
 
     .container {
-        width: 92%;
+        width: calc(100% - 20px);
         margin: 10px auto;
     }
 
     header {
-        padding: 15px;
+        padding: 12px;
     }
 
     h1 {
@@ -111,4 +138,7 @@ footer {
         padding: 12px;
     }
 
+    ul {
+        padding-left: 20px;
+    }
 }
