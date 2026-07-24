@@ -124,6 +124,48 @@ footer {
     margin: 10px auto;
     display: block;
 }
+/* Bitcoin address clickable text */
+.btc-box {
+    background: #454138;
+    border: 5px solid #8a806d;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 30px;
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+.btc-box h2 {
+    background: #504b40;
+    color: #f0dca5;
+    border-bottom: 1px solid #948873;
+    padding: 5px;
+    margin-top: 0;
+    font-size: clamp(18px, 4vw, 24px);
+}
+
+.btc-address {
+    background: #302d27;
+    color: #f1d58a;
+    border: 1px solid #7b705d;
+    padding: 12px;
+    font-family: monospace;
+    font-size: 14px;
+    word-break: break-all;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btc-address:hover {
+    background: #595345;
+    color: #fff4d0;
+}
+
+.copy-status {
+    text-align: center;
+    color: #d4c9b5;
+    margin-bottom: 0;
+}
 
 /* Phone layout */
 @media (max-width: 600px) {

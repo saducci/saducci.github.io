@@ -23,7 +23,7 @@
         <h2>About Me</h2>
         <p>
             Hi, I'm Sadegh (saducci).
-            I'm a student who enjoys learning programming,math,
+            I'm a student who enjoys learning programming, math,
             computer graphics, and game development.
         </p>
 
@@ -96,14 +96,34 @@
 
 
     <footer>
-        <p>Built by Saducci </p>
-         <p>This is my BTC address You can Support Me :) </p>
-         <section></section>
-        <p>bc1pjctsdkl2mdlpdmklmtsmajklr94<br>
-            hrzn640g5upm33jwf28atue0qkfa8ds</p>
+<div class="btc-box">
+    <h2>Support Me With Bitcoin</h2>
+
+    <div class="btc-address" onclick="copyBTC()">
+bc1pjctsdkl2mdlpdmklmtsmajklr94hrzn640g5upm33jwf28atue0qkfa8ds
+    </div>
+
+    <p class="copy-status" id="copy-status"></p>
+</div>
     </footer>
 
 </div>
+
+<script>
+function copyBTC() {
+    const address = document.querySelector(".btc-address").innerText;
+
+    navigator.clipboard.writeText(address).then(() => {
+        document.getElementById("copy-status").innerText = "Copied ✓";
+
+        setTimeout(() => {
+            document.getElementById("copy-status").innerText = "";
+        }, 2000);
+    });
+}
+</script>
+
+
 
 </body>
 </html>
