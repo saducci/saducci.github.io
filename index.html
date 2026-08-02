@@ -5,117 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saducci</title>
     <link rel="stylesheet" href="style.css">
+
     <link rel="icon" type="image/png" href="/src/saducci.png">
 </head>
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <header class="hero">
-            <h1>Sadegh</h1>
-            <p class="nickname">saducci</p>
-        </header>
+    <header>
+        <h1>Sadegh</h1>
+        <p class="nickname">saducci</p>
+    </header>
 
-        <main>
 
-            <section class="card">
-                <h2>About Me</h2>
-                <p>
-                    Hi, I'm Sadegh (saducci).
-                    I'm a student who enjoys learning programming, math,
-                    computer graphics, and game development.
-                </p>
+    <section class="card">
+        <h2>About Me</h2>
+        <p>
+            Hi, I'm Sadegh (saducci).
+            I'm a student who enjoys learning programming, math,
+            computer graphics, and game development.
+        </p>
 
-                <p>Currently learning:</p>
+        <p>
+            Currently learning:
+        </p>
 
-                <ul>
-                    <li>C++</li>
-                    <li>OpenGL</li>
-                    <li>Game Development</li>
-                    <li>Linux</li>
-                    <li>Computer Graphics</li>
-                    <li>Linear algebra</li>
-                </ul>
-            </section>
+        <ul>
+            <li>C++</li>
+            <li>OpenGL</li>
+            <li>Game Development</li>
+            <li>Linux</li>
+            <li>Computer Graphics</li>
+            <li>Linear algebra</li>
+        </ul>
+    </section>
 
-            <section class="card">
-                <h2>My Journey</h2>
 
-                <p>
-                    I started programming because I wanted to understand
-                    how games and software are built from the ground up.
-                    My goal is to become better at low-level programming
-                    and graphics programming.
-                </p>
-            </section>
+    <section class="card">
+        <h2>My Journey</h2>
 
-            <section class="card links">
-                <h2>Links</h2>
+        <p>
+            I started programming because I wanted to understand
+            how games and software are built from the ground up.
+            My goal is to become better at low-level programming
+            and graphics programming.
+        </p>
+    </section>
 
-                <a href="https://github.com/saducci">
-                    GitHub
-                </a>
 
-                <a href="https://github.com/saducci?tab=repositories">
-                    My Projects
-                </a>
+    <section class="card links">
+        <h2>Links</h2>
 
-                <a href="#">
-                    My notes
-                </a>
-            </section>
+        <a href="https://github.com/saducci">
+            GitHub
+        </a>
 
-            <section class="card">
-                <h2>Projects</h2>
+        <a href="https://github.com/saducci?tab=repositories">
+            My Projects
+        </a>
 
-                <ul>
-                    <li>OpenGL experiments</li>
-                    <li>Raylib game projects</li>
-                    <li>C++ learning projects</li>
-                </ul>
-            </section>
+        <a href="#">
+            My notes
+        </a>
+<!-- 
+        <a href="#">
+            Contact
+        </a> -->
+    </section>
 
-            <section class="card profile">
-                <h2>Profile</h2>
 
-                <img src="/src/sadegh.jpg" alt="Sadegh (saducci)" class="profile-image">
+    <section class="card">
+        <h2>Projects</h2>
 
-                <p>
-                    Sadegh (saducci)
-                </p>
-            </section>
+        <ul>
+            <li>OpenGL experiments</li>
+            <li>Raylib game projects</li>
+            <li>C++ learning projects</li>
+        </ul>
+    </section>
+    <section class="card profile">
+    <h2>Profile</h2>
 
-        </main>
+    <img src="/src/sadegh.jpg" alt="Sadegh (saducci)" class="profile-image">
 
-        <footer>
-            <div class="btc-box">
-                <h2>Support Me With Bitcoin</h2>
+    <p>
+        Sadegh (saducci)
+    </p>
+</section>
 
-                <div class="btc-address" onclick="copyBTC()">
-                    <span class="btc-text">bc1pjctsdkl2mdlpdmklmtsmajklr94hrzn640g5upm33jwf28atue0qkfa8ds</span>
-                    <p class="copy-status" id="copy-status"></p>
-                </div>
-            </div>
-        </footer>
 
+    <footer>
+<div class="btc-box">
+    <h2>Support Me With Bitcoin</h2>
+
+    <div class="btc-address" onclick="copyBTC()">
+bc1pjctsdkl2mdlpdmklmtsmajklr94hrzn640g5upm33jwf28atue0qkfa8ds
     </div>
 
-    <script>
-        function copyBTC() {
-            const address = document.querySelector(".btc-text").innerText;
+    <p class="copy-status" id="copy-status"></p>
+</div>
+    </footer>
 
-            navigator.clipboard.writeText(address).then(() => {
-                const status = document.getElementById("copy-status");
-                status.innerText = "Copied ✓";
-                status.classList.add("show");
+</div>
 
-                setTimeout(() => {
-                    status.classList.remove("show");
-                }, 2000);
-            });
-        }
-    </script>
+<script>
+function copyBTC() {
+    const address = document.querySelector(".btc-address").innerText;
+
+    navigator.clipboard.writeText(address).then(() => {
+        document.getElementById("copy-status").innerText = "Copied ✓";
+
+        setTimeout(() => {
+            document.getElementById("copy-status").innerText = "";
+        }, 2000);
+    });
+}
+</script>
+
+
 
 </body>
 </html>
