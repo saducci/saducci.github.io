@@ -3,199 +3,302 @@
 }
 
 body {
-    background: #534f4633;
-    color: #f8f7f4;
-    font-family: "Times New Roman", serif;
-    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #222;
     margin: 0;
 }
 
-
-/* Main page container */
 .container {
     width: calc(100% - 40px);
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 940px;
+    margin: 0 auto;
+    padding-bottom: 40px;
 }
 
 
-/* Top header */
-header {
-    background: #4a463d;
-    border: 2px solid #807766;
-    padding: 20px;
-    text-align: center;
+/* Top navbar (void green) */
+.navbar {
+    height: 50px;
+    background-color: #478061;
+    border: 0;
+    border-radius: 0;
+    z-index: 1;
+}
+
+.navbar-sticky {
+    position: sticky;
+    top: 0;
+    border-radius: 0;
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav li a {
+    display: block;
+    padding: 7px 10px;
+    font-size: 1.5em;
+    line-height: 1.2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav li:hover {
+    background-color: black;
+}
+
+
+/* Headings */
+h1, h2, h3, h4 {
+    color: black;
+}
+
+h2[id], h3[id] {
+    padding-top: 50px;
+    margin-top: -40px;
+}
+
+
+/* Links */
+a {
+    color: #478061;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Code */
+code {
+    font-family: 'Ubuntu Mono', monospace;
+    background-color: #fdf6e3;
+    color: #000;
+}
+
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 4px 0;
+    text-decoration: none;
+    border: 1px solid transparent;
     border-radius: 4px;
 }
 
-h1 {
-    font-size: clamp(28px, 6vw, 36px);
-    color: #f5e6bd;
-    margin: 0;
+.btn-green {
+    color: #fff;
+    background-color: #478061;
+    border-color: #478061;
+}
+
+.btn-green:hover {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+}
+
+
+/* Hero photo */
+#davoid {
+    margin: 30px auto;
+    position: relative;
+    text-align: center;
+}
+
+#davoid .bg {
+    margin: 0 auto;
+    position: relative;
+    max-width: 100%;
+    width: 260px;
+    height: auto;
+    border-radius: 4px;
 }
 
 .nickname {
-    color: #d4c9b5;
-}
-
-
-/* Content boxes */
-.card {
-    background: #454138;
-    border: 5px solid #8a806d;
-    border-radius: 5px;
-    padding: 15px;
-    margin-top: 30px;
-    width: 100%;
-    overflow-wrap: break-word;
-}
-
-
-h2 {
-    background: #504b40;
-    color: #f0dca5;
-    border-bottom: 1px solid #948873;
-    padding: 5px;
-    margin-top: 0;
-    font-size: clamp(18px, 4vw, 24px);
-}
-
-
-p, li {
-    line-height: 1.6;
-}
-
-
-/* Links box */
-.links a {
-    display: block;
-    background: #595345;
-    color: #f1d58a;
-    text-decoration: none;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #8f8268;
-    border-radius: 3px;
-}
-
-
-.links a:hover {
-    background: #6a604f;
-    color: #fff4d0;
-}
-
-
-/* Code blocks */
-code {
-    background: #302d27;
-    border: 1px solid #7b705d;
-    padding: 5px;
-    display: inline-block;
-    max-width: 100%;
-    overflow-wrap: break-word;
-}
-
-
-/* Images */
-img {
-    max-width: 50%;
-    height: auto;
-}
-
-
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 20px;
-    color: #0a0a09;
-}
-.profile {
+    margin: 6px 0 0;
+    color: #478061;
+    font-weight: 700;
     text-align: center;
 }
 
-.profile-image {
-    /* width: 200px;
-    height: 180px;
-    */
-    object-fit: cover;
-    /* border-radius: 50%; */
-    border: 2px solid #8a806d;
-    margin: 10px auto;
-    display: block;
-}
-/* Bitcoin address clickable text */
-.btc-box {
-    background: #454138;
-    border: 5px solid #8a806d;
-    border-radius: 5px;
-    padding: 15px;
-    margin-top: 30px;
-    width: 100%;
-    overflow-wrap: break-word;
+/* Centered buttons */
+.links-center {
+    text-align: center;
 }
 
-.btc-box h2 {
-    background: #504b40;
-    color: #f0dca5;
-    border-bottom: 1px solid #948873;
-    padding: 5px;
-    margin-top: 0;
-    font-size: clamp(18px, 4vw, 24px);
+
+/* Split layout */
+.split-section {
+    display: flex;
+    flex-wrap: wrap;
 }
 
+.split-section > div {
+    flex: 1;
+}
+
+.split-section > div:first-of-type {
+    padding-right: 4rem;
+}
+
+@media (max-width: 600px) {
+    .split-section {
+        flex-direction: column;
+    }
+
+    .split-section > div:first-of-type {
+        padding-right: 0;
+    }
+}
+
+
+/* Grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-md-3, .col-md-4, .col-md-9 {
+    padding: 0 15px;
+}
+
+.col-md-3 { flex: 0 0 25%; }
+.col-md-4 { flex: 0 0 33.333%; }
+.col-md-9 { flex: 0 0 75%; }
+
+@media (max-width: 992px) {
+    .col-md-3, .col-md-4, .col-md-9 { flex: 0 0 100%; }
+}
+
+
+/* Bitcoin address */
 .btc-address {
-    background: #302d27;
-    color: #f1d58a;
-    border: 1px solid #7b705d;
+    background: #fdf6e3;
+    color: #000;
+    font-family: 'Ubuntu Mono', monospace;
+    border: 1px solid #ddd;
     padding: 12px;
-    font-family: monospace;
-    font-size: 14px;
     word-break: break-all;
-    border-radius: 3px;
     cursor: pointer;
 }
 
 .btc-address:hover {
-    background: #595345;
-    color: #fff4d0;
+    background: #ddd;
 }
 
 .copy-status {
     text-align: center;
-    color: #d4c9b5;
-    margin-bottom: 0;
+    color: #555;
 }
+
+
+/* Divider and footer */
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.footer {
+    text-align: center;
+    color: #555;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* Dark mode (like voidlinux.org) */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #ccc;
+        background-color: #222;
+    }
+
+    h1, h2, h3, h4 {
+        color: #ccc;
+    }
+
+    a {
+        color: #62b086;
+    }
+
+    a:hover {
+        color: #ccc;
+    }
+
+    hr {
+        border-top: 1px solid #888;
+    }
+
+    .navbar {
+        background-color: #295340;
+    }
+
+    .nav li:hover {
+        background-color: #222;
+    }
+
+    code {
+        background-color: inherit;
+        color: white;
+    }
+
+    .btn-green {
+        color: #fff;
+        background-color: #295340;
+        border-color: #295340;
+    }
+
+    .btn-green:hover {
+        color: #fff;
+        background-color: #111;
+        border-color: #111;
+    }
+
+    .nickname {
+        color: #62b086;
+    }
+
+    .btc-address {
+        background-color: inherit;
+        color: #ccc;
+        border: 1px solid #888;
+    }
+
+    .btc-address:hover {
+        background-color: #333;
+    }
+
+    .copy-status {
+        color: #ccc;
+    }
+
+    .footer {
+        color: #aaa;
+    }
+}
+
 
 /* Phone layout */
 @media (max-width: 600px) {
-
-    body {
-        font-size: 16px;
-    }
-
     .container {
         width: calc(100% - 20px);
-        margin: 10px auto;
     }
 
-    header {
-        padding: 12px;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    .card {
-        padding: 12px;
-    }
-
-    ul {
-        padding-left: 20px;
+    .nav li a {
+        padding: 1px 5px;
+        font-size: 1em;
+        line-height: 1.2;
     }
 }
