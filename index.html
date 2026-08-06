@@ -3,140 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#478061">
-    <title>saducci</title>
+    <title>Saducci</title>
+    <link rel="stylesheet" href="style.css">
 
     <link rel="icon" type="image/png" href="/src/saducci.png">
-
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=5">
 </head>
 
-<body role="document">
+<body>
 
-    <nav class="navbar navbar-sticky">
-        <div class="container">
-            <ul class="nav">
-                <li><a href="#about">About</a></li>
-                <li><a href="#learning">Learning</a></li>
-                <li><a href="#journey">Journey</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#links">Links</a></li>
-                <li><a href="#support">Support</a></li>
-            </ul>
-        </div>
-    </nav>
+<div class="container">
 
-    <div class="container">
+    <header>
+        <h1>Sadegh</h1>
+        <p class="nickname">saducci</p>
+    </header>
 
-        <section id="about" class="split-section">
-            <div class="col-md-3">
-                <div id="davoid">
-                    <img class="bg" src="/src/sadegh.jpg" alt="Sadegh (saducci)">
-                </div>
-                <p class="nickname">SADUCCI</p>
-            </div>
-            <div class="col-md-9">
-                <h2>Hi, I'm Sadegh (saducci)</h2>
-                <p>
-                    I'm a student who enjoys learning programming, math,
-                    computer graphics, and game development.
-                </p>
-              
-            </div>
-        </section>
 
-        <hr>
+    <section class="card">
+        <h2>About Me</h2>
+        <p>
+            Hi, I'm Sadegh (saducci).
+            I'm a student who enjoys learning programming, math,
+            computer graphics, and game development.
+        </p>
 
-        <div class="row">
+        <p>
+            Currently learning:
+        </p>
 
-            <section id="learning" class="col-md-4">
-                <h3>Currently Learning</h3>
-                <ul>
-                    <li>C++</li>
-                    <li>OpenGL</li>
-                    <li>Game Development</li>
-                    <li>Linux</li>
-                    <li>Computer Graphics</li>
-                    <li>Linear algebra</li>
-                </ul>
-            </section>
+        <ul>
+            <li>C++</li>
+            <li>OpenGL</li>
+            <li>Game Development</li>
+            <li>Linux</li>
+            <li>Computer Graphics</li>
+            <li>Linear algebra</li>
+        </ul>
+    </section>
 
-            <section id="journey" class="col-md-4">
-                <h3>My Journey</h3>
-                <p>
-                    I started programming because I wanted to understand
-                    how games and software are built from the ground up.
-                    My goal is to become better at low-level programming
-                    and graphics programming.
-                </p>
-            </section>
 
-            <section id="projects" class="col-md-4">
-                <h3>Projects</h3>
-                <ul>
-                    <li>OpenGL experiments</li>
-                    <li>Raylib game projects</li>
-                    <li>C++ learning projects</li>
-                </ul>
-            </section>
+    <section class="card">
+        <h2>My Journey</h2>
 
-        </div>
+        <p>
+            I started programming because I wanted to understand
+            how games and software are built from the ground up.
+            My goal is to become better at low-level programming
+            and graphics programming.
+        </p>
+    </section>
 
-        <hr>
 
-        <section id="links">
-            <h2>Links</h2>
-            <p>
-                Find me on GitHub, browse my repositories, or read my notes.
-            </p>
-            <p class="links-center">
-                <a class="btn btn-green" href="https://github.com/saducci">
-                    GitHub
-                </a>
-                <a class="btn btn-green" href="https://github.com/saducci?tab=repositories">
-                    My Projects
-                </a>
-                <a class="btn btn-green" href="#">
-                    My notes
-                </a>
-            </p>
-        </section>
+    <section class="card links">
+        <h2>Links</h2>
 
-        <hr>
+        <a href="https://github.com/saducci">
+            GitHub
+        </a>
 
-        <section id="support">
-            <h2>Support Me With Bitcoin</h2>
-            <p>
-                If you enjoy what I do, consider donating a few sats.
-            </p>
-            <p class="btc-address" onclick="copyBTC()">
+        <a href="https://github.com/saducci?tab=repositories">
+            My Projects
+        </a>
+
+        <a href="#">
+            My notes
+        </a>
+<!-- 
+        <a href="#">
+            Contact
+        </a> -->
+    </section>
+
+
+    <section class="card">
+        <h2>Projects</h2>
+
+        <ul>
+            <li>OpenGL experiments</li>
+            <li>Raylib game projects</li>
+            <li>C++ learning projects</li>
+        </ul>
+    </section>
+    <section class="card profile">
+    <h2>Profile</h2>
+
+    <img src="/src/sadegh.jpg" alt="Sadegh (saducci)" class="profile-image">
+
+    <p>
+        Sadegh (saducci)
+    </p>
+</section>
+
+
+    <footer>
+<div class="btc-box">
+    <h2>Support Me With Bitcoin</h2>
+
+    <div class="btc-address" onclick="copyBTC()">
 bc1pjctsdkl2mdlpdmklmtsmajklr94hrzn640g5upm33jwf28atue0qkfa8ds
-            </p>
-            <p class="copy-status" id="copy-status"></p>
-        </section>
-
-        <hr>
-
-        <footer class="footer">
-            <p class="text-center">Copyright 2026 saducci</p>
-        </footer>
-
     </div>
 
-    <script>
-    function copyBTC() {
-        const address = document.querySelector(".btc-address").innerText;
+    <p class="copy-status" id="copy-status"></p>
+</div>
+    </footer>
 
-        navigator.clipboard.writeText(address).then(() => {
-            document.getElementById("copy-status").innerText = "Copied ✓";
+</div>
 
-            setTimeout(() => {
-                document.getElementById("copy-status").innerText = "";
-            }, 2000);
-        });
-    }
-    </script>
+<script>
+function copyBTC() {
+    const address = document.querySelector(".btc-address").innerText;
+
+    navigator.clipboard.writeText(address).then(() => {
+        document.getElementById("copy-status").innerText = "Copied ✓";
+
+        setTimeout(() => {
+            document.getElementById("copy-status").innerText = "";
+        }, 2000);
+    });
+}
+</script>
+
+
 
 </body>
 </html>
