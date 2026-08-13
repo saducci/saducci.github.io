@@ -4,34 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saducci</title>
-    <link rel="stylesheet" href="style.css">
 
     <link rel="icon" type="image/png" href="/src/saducci.png">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="container">
 
-    <header>
-        <h1>Sadegh</h1>
-        <p class="nickname">saducci</p>
+    <header class="nes-pointer">
+        <h1 class="site-title">Sadegh</h1>
+        <p class="nickname">
+            <i class="nes-icon heart is-small"></i>
+            saducci
+            <i class="nes-icon heart is-small"></i>
+        </p>
     </header>
 
-
-    <section class="card">
-        <h2>About Me</h2>
+    <section class="nes-container with-title is-rounded">
+        <h3 class="title">About Me</h3>
         <p>
             Hi, I'm Sadegh (saducci).
             I'm a student who enjoys learning programming, math,
             computer graphics, and game development.
         </p>
 
-        <p>
-            Currently learning:
-        </p>
+        <p>Currently learning:</p>
 
-        <ul>
+        <ul class="nes-list is-disc">
             <li>C++</li>
             <li>OpenGL</li>
             <li>Game Development</li>
@@ -41,10 +44,8 @@
         </ul>
     </section>
 
-
-    <section class="card">
-        <h2>My Journey</h2>
-
+    <section class="nes-container with-title is-rounded">
+        <h3 class="title">My Journey</h3>
         <p>
             I started programming because I wanted to understand
             how games and software are built from the ground up.
@@ -53,58 +54,57 @@
         </p>
     </section>
 
+    <section class="nes-container with-title is-rounded">
+        <h3 class="title">Links</h3>
 
-    <section class="card links">
-        <h2>Links</h2>
+        <div class="link-grid">
+            <a class="nes-btn is-primary" href="https://github.com/saducci">
+                <i class="nes-icon github is-small"></i>
+                GitHub
+            </a>
 
-        <a href="https://github.com/saducci">
-            GitHub
-        </a>
+            <a class="nes-btn is-success" href="https://github.com/saducci?tab=repositories">
+                My Projects
+            </a>
 
-        <a href="https://github.com/saducci?tab=repositories">
-            My Projects
-        </a>
-
-        <a href="#">
-            My notes
-        </a>
-<!-- 
-        <a href="#">
-            Contact
-        </a> -->
+            <a class="nes-btn is-warning" href="#">
+                My Notes
+            </a>
+        </div>
     </section>
 
+    <section class="nes-container with-title is-rounded">
+        <h3 class="title">Projects</h3>
 
-    <section class="card">
-        <h2>Projects</h2>
-
-        <ul>
+        <ul class="nes-list is-disc">
             <li>OpenGL experiments</li>
             <li>Raylib game projects</li>
             <li>C++ learning projects</li>
         </ul>
     </section>
-    <section class="card profile">
-    <h2>Profile</h2>
 
-    <img src="/src/sadegh.jpg" alt="Sadegh (saducci)" class="profile-image">
+    <section class="nes-container with-title is-rounded profile">
+        <h3 class="title">Profile</h3>
 
-    <p>
-        Sadegh (saducci)
-    </p>
-</section>
+        <img src="/src/sadegh.jpg" alt="Sadegh (saducci)" class="profile-image">
 
+        <p>
+            Sadegh (saducci)
+        </p>
+    </section>
+
+    <section class="nes-container with-title is-rounded">
+        <h3 class="title">Support Me With Bitcoin</h3>
+
+        <div class="btc-address nes-pointer" onclick="copyBTC()">
+bc1pjctsdkl2mdlpdmklmtsmajklr94hrzn640g5upm33jwf28atue0qkfa8ds
+        </div>
+
+        <p class="copy-status" id="copy-status"></p>
+    </section>
 
     <footer>
-<div class="btc-box">
-    <h2>Support Me With Bitcoin</h2>
-
-    <div class="btc-address" onclick="copyBTC()">
-bc1pjctsdkl2mdlpdmklmtsmajklr94hrzn640g5upm33jwf28atue0qkfa8ds
-    </div>
-
-    <p class="copy-status" id="copy-status"></p>
-</div>
+        <span>Made with NES.css</span>
     </footer>
 
 </div>
@@ -114,7 +114,7 @@ function copyBTC() {
     const address = document.querySelector(".btc-address").innerText;
 
     navigator.clipboard.writeText(address).then(() => {
-        document.getElementById("copy-status").innerText = "Copied ✓";
+        document.getElementById("copy-status").innerText = "Copied!";
 
         setTimeout(() => {
             document.getElementById("copy-status").innerText = "";
@@ -122,8 +122,6 @@ function copyBTC() {
     });
 }
 </script>
-
-
 
 </body>
 </html>

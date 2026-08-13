@@ -1,201 +1,162 @@
 * {
     box-sizing: border-box;
+    -webkit-font-smoothing: none;
 }
 
 body {
-    background: #534f4633;
-    color: #f8f7f4;
-    font-family: "Times New Roman", serif;
-    font-size: 16px;
+    background: #f4ecd8;
+    color: #2f2a24;
+    font-family: "Press Start 2P", "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.8;
     margin: 0;
+    padding: 30px 0;
+    image-rendering: pixelated;
 }
 
 
 /* Main page container */
 .container {
     width: calc(100% - 40px);
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 760px;
+    margin: 0 auto;
 }
 
 
 /* Top header */
 header {
-    background: #4a463d;
-    border: 2px solid #807766;
-    padding: 20px;
     text-align: center;
-    border-radius: 4px;
+    padding: 20px 0 40px;
 }
 
-h1 {
-    font-size: clamp(28px, 6vw, 36px);
-    color: #f5e6bd;
-    margin: 0;
+.site-title {
+    font-size: clamp(24px, 7vw, 42px);
+    margin: 0 0 12px;
+    color: #2f2a24;
+    text-shadow: 4px 4px 0 #e76e55;
 }
 
 .nickname {
-    color: #d4c9b5;
+    font-size: 13px;
+    color: #b05a2e;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.nickname .nes-icon {
+    margin: 0 10px;
 }
 
 
 /* Content boxes */
-.card {
-    background: #454138;
-    border: 5px solid #8a806d;
-    border-radius: 5px;
-    padding: 15px;
-    margin-top: 30px;
-    width: 100%;
+.nes-container {
+    margin-bottom: 40px;
+    color: #2f2a24;
+    background: #fffdf7;
     overflow-wrap: break-word;
 }
 
-
-h2 {
-    background: #504b40;
-    color: #f0dca5;
-    border-bottom: 1px solid #948873;
-    padding: 5px;
-    margin-top: 0;
-    font-size: clamp(18px, 4vw, 24px);
+.nes-container p {
+    margin: 0 0 1rem;
 }
 
 
-p, li {
-    line-height: 1.6;
+/* NES button grid */
+.link-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.link-grid .nes-btn {
+    min-width: 200px;
+    text-align: center;
+}
+
+.nes-btn .nes-icon {
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 
-/* Links box */
-.links a {
+/* Pixel image */
+.profile {
+    text-align: center;
+}
+
+.profile-image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 4px solid #2f2a24;
+    box-shadow: 8px 8px 0 #e76e55;
     display: block;
-    background: #595345;
-    color: #f1d58a;
-    text-decoration: none;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #8f8268;
-    border-radius: 3px;
+    margin: 10px auto 20px;
+    image-rendering: pixelated;
 }
 
 
-.links a:hover {
-    background: #6a604f;
-    color: #fff4d0;
+/* Bitcoin address clickable box */
+.btc-address {
+    background: #fffdf7;
+    color: #2f2a24;
+    border: 4px solid #2f2a24;
+    box-shadow: inset -4px -4px 0 #e6dcc8;
+    padding: 16px;
+    font-family: "Press Start 2P", monospace;
+    font-size: 11px;
+    line-height: 2;
+    word-break: break-all;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
-
-/* Code blocks */
-code {
-    background: #302d27;
-    border: 1px solid #7b705d;
-    padding: 5px;
-    display: inline-block;
-    max-width: 100%;
-    overflow-wrap: break-word;
+.btc-address:hover {
+    background: #faf3e0;
+    color: #b05a2e;
 }
 
-
-/* Images */
-img {
-    max-width: 50%;
-    height: auto;
+.copy-status {
+    text-align: center;
+    color: #e76e55;
+    font-size: 11px;
+    min-height: 1.2em;
+    margin: 0;
 }
 
 
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 30px;
-    font-size: 20px;
-    color: #0a0a09;
-}
-.profile {
-    text-align: center;
+    margin-top: 40px;
+    color: #8a7a5c;
+    font-size: 10px;
 }
 
-.profile-image {
-    /* width: 200px;
-    height: 180px;
-    */
-    object-fit: cover;
-    /* border-radius: 50%; */
-    border: 2px solid #8a806d;
-    margin: 10px auto;
-    display: block;
-}
-/* Bitcoin address clickable text */
-.btc-box {
-    background: #454138;
-    border: 5px solid #8a806d;
-    border-radius: 5px;
-    padding: 15px;
-    margin-top: 30px;
-    width: 100%;
-    overflow-wrap: break-word;
-}
-
-.btc-box h2 {
-    background: #504b40;
-    color: #f0dca5;
-    border-bottom: 1px solid #948873;
-    padding: 5px;
-    margin-top: 0;
-    font-size: clamp(18px, 4vw, 24px);
-}
-
-.btc-address {
-    background: #302d27;
-    color: #f1d58a;
-    border: 1px solid #7b705d;
-    padding: 12px;
-    font-family: monospace;
-    font-size: 14px;
-    word-break: break-all;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.btc-address:hover {
-    background: #595345;
-    color: #fff4d0;
-}
-
-.copy-status {
-    text-align: center;
-    color: #d4c9b5;
-    margin-bottom: 0;
-}
 
 /* Phone layout */
 @media (max-width: 600px) {
 
     body {
-        font-size: 16px;
+        font-size: 11px;
+        padding: 15px 0;
     }
 
     .container {
         width: calc(100% - 20px);
-        margin: 10px auto;
     }
 
-    header {
-        padding: 12px;
+    .nes-container {
+        padding: 1rem;
     }
 
-    h1 {
-        font-size: 28px;
+    .link-grid .nes-btn {
+        min-width: 100%;
     }
 
-    h2 {
-        font-size: 20px;
-    }
-
-    .card {
-        padding: 12px;
-    }
-
-    ul {
-        padding-left: 20px;
+    .profile-image {
+        width: 160px;
+        height: 160px;
     }
 }
